@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@keyframes fall {
+    0% {
+      transform: translateY(-100vh) rotate(0deg);
+      opacity: 0.4;
+    }
+    100% {
+
+      transform: translateY(100vh) rotate(360deg);
+      opacity: 0;
+    }
+  }
+  
+  .animate-fall {
+    animation: fall linear infinite;
+  }
+
+.chatbot-font {
+  font-family: 'Patrick Hand', cursive;
+}
+
+@media (max-width: 1023px) {
+    .nav-hidden {
+      display: none;
+    }
+    .nav-open {
+      display: flex;
+      flex-direction: column;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      background: #fef3c7; /* bg-amber-50 */
+      padding: 1rem;
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .nav-hidden {
+      display: flex;
+      flex-direction: row;
+      position: static;
+      background: transparent;
+      padding: 0;
+    }
+  }
